@@ -6,15 +6,15 @@ import random
 import pypyodbc
 import os.path
 
-# Get the absolute path of the working environment for the eventual SQL connection
+# Get the absolute path of the working environment for the eventual SQL connection.
 pathVar = os.path.abspath("")
 dbPathVar = os.path.abspath("es_names_real.mdb")
 
-# Flip the backslashes to forward slashes in the abs path
+# Flip the backslashes to forward slashes in the abs path.
 for i in pathVar:
     pathVar = pathVar.replace("\\","/")
 
-# Flip the backslashes to forward slashes in the abs path of the database
+# Flip the backslashes to forward slashes in the abs path of the database.
 for i in dbPathVar:
     dbPathVar = dbPathVar.replace("\\","/")
 
@@ -40,9 +40,12 @@ def main_menu():
     print("  |  ______________________________________________|_")
     print("  \_/_______________________________________________/")
     while True:
+        # Get user's input for number
         raceNum = input()
+        # Try converting raceNum to an int, if that doesn't work then its invalid, so try again.
         try:
             int(raceNum)
+            # Check if valid int raceNum is within the boundaries of possible selections.
             if int(raceNum) < 1 or int(raceNum) > 10:
                 print("Please input a valid option (Number 1 through 10.)")
             else:
