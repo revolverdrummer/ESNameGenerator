@@ -39,7 +39,16 @@ def main_menu():
     print("  |                                                |")
     print("  |  ______________________________________________|_")
     print("  \_/_______________________________________________/")
-    raceNum = input()
+    while True:
+        raceNum = input()
+        try:
+            int(raceNum)
+            if int(raceNum) < 1 or int(raceNum) > 10:
+                print("Please input a valid option (Number 1 through 10.)")
+            else:
+                break    
+        except:
+            print("Please input a valid option (Number 1 through 10.)")
     return raceNum
 
 # Funtion for races with only one name
