@@ -1,3 +1,4 @@
+# Only works in Python 3.6.7 32 Bit. Navigate to the directory of Python 3.6.7 and into the Scripts folder. Open a command prompt in that directory and run 'pip3.6.exe install pypyodbc' without the quotes. The program should then work from a Python 3.6.7 32 bit interpreter.
 # This program was written in December 2018 by RevolverDrummer
 # The only library that needs to be installed is pypyodbc. Once this is on a the system, this program will work.
 
@@ -163,7 +164,12 @@ while repeater == 'y':
         elif raceNum == "10":
             race = "redguard"
         # Ask for the gender of the character.
-        gender = input('What is the gender of the character you are creating? ')
+        while True:
+            gender = input('What is the gender of the character you are creating? ')
+            if gender == "male" or gender == "female":
+                break
+            else:
+                print("Please input a compatible answer (male/female)")
         # Normalize the input to be lowercase.
         gender = gender.lower()
         
