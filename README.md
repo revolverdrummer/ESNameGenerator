@@ -3,4 +3,4 @@ A database and random name generator script for the Elder Scrolls Universe.
 
 Please be sure to keep the databases and script in the same directory.
 
-Use pip install pypyodbc and the script will be ready to go.
+Only works in Python 3.6.7 32 bit. Use "pip3.6.exe install pypyodbc" from the Python 3.6.7 32 bit Scripts directory and the program will be ready to run.
